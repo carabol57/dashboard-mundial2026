@@ -180,14 +180,15 @@ PARTIDOS = [
     ("2026-07-09", "WC2026", "cuartos", "ESP", "BEL", 1, 0, 0, None, None, "media-alta"),
     ("2026-07-10", "WC2026", "cuartos", "ENG", "NOR", 2, 1, 0, None, None, "media-alta"),
     ("2026-07-11", "WC2026", "cuartos", "ARG", "SUI", 3, 1, 0, None, None, "media-alta"),
-    ("2026-07-14", "WC2026", "semifinal", "ESP", "FRA", None, None, 0, None, None, "pendiente"),
-    ("2026-07-15", "WC2026", "semifinal", "ARG", "ENG", None, None, 0, None, None, "pendiente"),
+    ("2026-07-14", "WC2026", "semifinal", "ESP", "FRA", 2, 0, 0, None, None, "alta"),
+    ("2026-07-15", "WC2026", "semifinal", "ARG", "ENG", 2, 1, 0, None, None, "alta"),
     ("2026-07-18", "WC2026", "tercer_puesto", "FRA", "ENG", 4, 6, 0, None, None, "alta"),
     ("2026-07-19", "WC2026", "final", "ESP", "ARG", 1, 0, 0, None, None, "media-alta"),
     (None, "REPECHAJE2026", "repechaje_intercontinental_final", "JAM", "COD", 0, 1, 0, None, None, "media-alta"),
     ("2025-11-16", "REPECHAJEAF2025", "repechaje_semifinal", "COD", "CMR", 1, 0, 0, None, None, "media-alta"),
     ("2025-11-16", "REPECHAJEAF2025", "repechaje_semifinal", "NGA", "GAB", 4, 1, 0, None, None, "media-alta"),
     ("2025-11-17", "REPECHAJEAF2025", "repechaje_final", "COD", "NGA", 1, 1, 1, 4, 3, "media-alta"),
+    ("2025-06-08", "UNL2425", "final", "POR", "ESP", 2, 2, 1, 5, 3, "alta"),
     # Eliminatoria CONMEBOL de Colombia, verificada partido por partido - 18 de 18 identificados
     # Correccion 17-ago-2026: la fecha 2 estaba mal cargada como Peru; el rival real de la fecha 2
     # fue Chile (Santiago). Se agrego la fecha 7 (Peru, Lima), que faltaba por completo. Se elimino
@@ -226,6 +227,8 @@ FUENTES = [
     ("YouTube CONMEBOL Eliminatorias / 365scores", "youtube.com, 365scores.com", "2026-08-17", "ELIM_CONMEBOL", "Fecha exacta fecha 12 vs Ecuador (19-nov-2024)", "alta"),
     ("Infobae / Pulzo / beIN Sports / El Colombiano", "infobae.com, pulzo.com, beinsports.com", "2026-08-17", "Entrenadores", "Confirmacion de Carlos Queiroz como tecnico de Ghana", "alta"),
     ("TUDN / eleconomista.com.ar", "tudn.com, eleconomista.com.ar", "2026-08-17", "Ranking FIFA", "Ranking FIFA post-Mundial 2026, posiciones 11 a 88 para las 48 clasificadas", "media-alta"),
+    ("CNN / LA NACION / El Universal / Mediotiempo", "cnnespanol.cnn.com, lanacion.com.ar, eluniversal.com.mx", "2026-08-17", "WC2026", "Marcador semifinales: Espana 2-0 Francia y Argentina 2-1 Inglaterra", "alta"),
+    ("ESPN / UEFA.com / Fox Sports / Al Jazeera", "espn.com, uefa.com, foxsports.com, aljazeera.com", "2026-08-17", "UNL2425", "Final Liga de Naciones UEFA: Portugal 2-2 Espana, Portugal gano 5-3 en penales", "alta"),
 ]
 
 # Entrenadores confirmados por confederacion (fuente: si.com, listado de los 48 tecnicos del Mundial 2026,
@@ -267,9 +270,7 @@ RANKING_FIN_CICLO_TOP10 = {
 }
 
 DATOS_PENDIENTES = [
-    ("Mundial 2026 semifinales", "Marcador exacto de Espana-Francia y Argentina-Inglaterra", "Solo se confirmo el resultado cualitativo (quien avanzo)"),
     ("Eliminatorias CAF/AFC/CONCACAF/OFC", "Tablas de posiciones completas de selecciones no clasificadas", "Fuera de alcance manual verificado en esta fase"),
-    ("Liga de Naciones UEFA 2024-25", "Marcador exacto de la final Portugal-Espana", "Campeon confirmado, marcador exacto no verificado"),
     ("Ranking FIFA fin de ciclo - selecciones no clasificadas", "Ranking post-Mundial de Venezuela, Peru, Bolivia, Chile, Jamaica, Nigeria, Camerun y Gabon; y ranking de inicio de ciclo (sept 2023) de las 48 clasificadas", "Se completaron las 48 clasificadas; el resto queda fuera de alcance en esta fase"),
     ("Estadisticas colectivas e individuales", "Goles, tiros, posesion, xG, y estadisticas de jugadores", "No recopilado en esta fase; requiere fuente estructurada"),
 ]
