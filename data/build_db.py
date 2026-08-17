@@ -189,24 +189,27 @@ PARTIDOS = [
     ("2025-11-16", "REPECHAJEAF2025", "repechaje_semifinal", "NGA", "GAB", 4, 1, 0, None, None, "media-alta"),
     ("2025-11-17", "REPECHAJEAF2025", "repechaje_final", "COD", "NGA", 1, 1, 1, 4, 3, "media-alta"),
     # Eliminatoria CONMEBOL de Colombia, verificada partido por partido - 18 de 18 identificados
-    ("2023-09-07", "ELIM_CONMEBOL", "fecha_1", "COL", "VEN", 1, 0, 0, None, None, "media-alta"),
-    ("2023-09-12", "ELIM_CONMEBOL", "fecha_2", "PER", "COL", 0, 0, 0, None, None, "alta"),
+    # Correccion 17-ago-2026: la fecha 2 estaba mal cargada como Peru; el rival real de la fecha 2
+    # fue Chile (Santiago). Se agrego la fecha 7 (Peru, Lima), que faltaba por completo. Se elimino
+    # el registro erroneo "fecha_vuelta_chile", que era un duplicado de la fecha 2 mal identificado.
+    ("2023-09-07", "ELIM_CONMEBOL", "fecha_1", "COL", "VEN", 1, 0, 0, None, None, "alta"),
+    ("2023-09-12", "ELIM_CONMEBOL", "fecha_2", "CHI", "COL", 0, 0, 0, None, None, "alta"),
     ("2023-10-12", "ELIM_CONMEBOL", "fecha_3", "COL", "URU", 2, 2, 0, None, None, "alta"),
     ("2023-10-17", "ELIM_CONMEBOL", "fecha_4", "ECU", "COL", 0, 0, 0, None, None, "alta"),
     ("2023-11-16", "ELIM_CONMEBOL", "fecha_5", "COL", "BRA", 2, 1, 0, None, None, "alta"),
     ("2023-11-21", "ELIM_CONMEBOL", "fecha_6", "PAR", "COL", 0, 1, 0, None, None, "alta"),
+    ("2024-09-06", "ELIM_CONMEBOL", "fecha_7", "PER", "COL", 1, 1, 0, None, None, "alta"),
     ("2024-09-10", "ELIM_CONMEBOL", "fecha_8", "COL", "ARG", 2, 1, 0, None, None, "alta"),
     ("2024-10-09", "ELIM_CONMEBOL", "fecha_9", "BOL", "COL", 1, 0, 0, None, None, "alta"),
     ("2024-10-15", "ELIM_CONMEBOL", "fecha_10", "COL", "CHI", 4, 0, 0, None, None, "alta"),
-    (None, "ELIM_CONMEBOL", "fecha_11", "URU", "COL", 3, 2, 0, None, None, "media-alta"),
+    ("2024-11-16", "ELIM_CONMEBOL", "fecha_11", "URU", "COL", 3, 2, 0, None, None, "alta"),
+    ("2024-11-19", "ELIM_CONMEBOL", "fecha_12", "COL", "ECU", 0, 1, 0, None, None, "alta"),
     ("2025-03-21", "ELIM_CONMEBOL", "fecha_13", "BRA", "COL", 2, 1, 0, None, None, "alta"),
     ("2025-03-26", "ELIM_CONMEBOL", "fecha_14", "COL", "PAR", 2, 2, 0, None, None, "alta"),
     ("2025-06-06", "ELIM_CONMEBOL", "fecha_15", "COL", "PER", 0, 0, 0, None, None, "alta"),
     ("2025-06-10", "ELIM_CONMEBOL", "fecha_16", "ARG", "COL", 1, 1, 0, None, None, "alta"),
     ("2025-09-04", "ELIM_CONMEBOL", "fecha_17", "COL", "BOL", 3, 0, 0, None, None, "alta"),
     ("2025-09-09", "ELIM_CONMEBOL", "fecha_18", "VEN", "COL", 3, 6, 0, None, None, "alta"),
-    (None, "ELIM_CONMEBOL", "fecha_vuelta_ecuador", "COL", "ECU", 0, 1, 0, None, None, "media-alta"),
-    (None, "ELIM_CONMEBOL", "fecha_vuelta_chile", "CHI", "COL", 0, 0, 0, None, None, "media-alta"),
 ]
 
 FUENTES = [
@@ -217,6 +220,12 @@ FUENTES = [
     ("FIFA.com match centre", "fifa.com", "2026-08-17", "WC2026", "Resultado tercer puesto", "alta"),
     ("CNN / Telemundo", "cnnespanol.cnn.com", "2026-08-16", "WC2026", "Resultado de la final", "media-alta"),
     ("ESPN", "espndeportes.espn.com", "2026-08-17", "UEFA repechaje", "Resultados de repechaje UEFA", "media-alta"),
+    ("Infobae Peru / RPP / CONMEBOL / Primicias", "infobae.com, rpp.pe, conmebol.com", "2026-08-17", "ELIM_CONMEBOL", "Fecha 7 Peru vs Colombia (1-1, 6-sep-2024, Lima) y correccion de fecha 2 (Chile, 12-sep-2023, Santiago)", "alta"),
+    ("Infobae Colombia", "infobae.com", "2026-08-17", "ELIM_CONMEBOL", "Sede confirmada fecha 1 vs Venezuela (Barranquilla)", "alta"),
+    ("Fotmob / AUF", "fotmob.com, auf.org.uy", "2026-08-17", "ELIM_CONMEBOL", "Fecha exacta fecha 11 vs Uruguay (16-nov-2024)", "alta"),
+    ("YouTube CONMEBOL Eliminatorias / 365scores", "youtube.com, 365scores.com", "2026-08-17", "ELIM_CONMEBOL", "Fecha exacta fecha 12 vs Ecuador (19-nov-2024)", "alta"),
+    ("Infobae / Pulzo / beIN Sports / El Colombiano", "infobae.com, pulzo.com, beinsports.com", "2026-08-17", "Entrenadores", "Confirmacion de Carlos Queiroz como tecnico de Ghana", "alta"),
+    ("TUDN / eleconomista.com.ar", "tudn.com, eleconomista.com.ar", "2026-08-17", "Ranking FIFA", "Ranking FIFA post-Mundial 2026, posiciones 11 a 88 para las 48 clasificadas", "media-alta"),
 ]
 
 # Entrenadores confirmados por confederacion (fuente: si.com, listado de los 48 tecnicos del Mundial 2026,
@@ -234,27 +243,34 @@ ENTRENADORES = {
     "BIH": "Sergej Barbarez", "CZE": "Miroslav Koubek", "TUR": "Vincenzo Montella",
     "SWE": "Graham Potter", "EGY": "Hossam Hassan", "ALG": "Vladimir Petkovic",
     "TUN": "Herve Renard", "CIV": "Emerse Fae", "SEN": "Aliou Cisse",
-    "GHA": None, "MAR": "Mohamed Ouahbi", "RSA": "Hugo Broos",
+    "GHA": "Carlos Queiroz", "MAR": "Mohamed Ouahbi", "RSA": "Hugo Broos",
     "CPV": "Pedro Leitao Brito (Bubista)", "COD": "Sebastien Desabre",
     "NZL": "Darren Bazeley", "USA": "Mauricio Pochettino", "MEX": "Javier Aguirre",
     "CAN": "Jesse Marsch", "HAI": "Sebastien Migne", "CUW": "Dick Advocaat",
     "PAN": "Thomas Christiansen Tarin",
 }
 
-# Top 10 del ranking FIFA post-Mundial 2026 (fuente: TUDN, consultado 17 de agosto de 2026,
-# confiabilidad media-alta; posiciones 11-48 quedan pendientes)
+# Ranking FIFA post-Mundial 2026 completo para las 48 selecciones clasificadas
+# (fuente: TUDN + eleconomista.com.ar, consultado 17 de agosto de 2026; el top 10 coincide
+# exactamente entre ambas fuentes, confiabilidad media-alta)
 RANKING_FIN_CICLO_TOP10 = {
     "ESP": 1, "ARG": 2, "FRA": 3, "ENG": 4, "BRA": 5,
     "MAR": 6, "POR": 7, "BEL": 8, "NED": 9, "MEX": 10,
+    "COL": 11, "GER": 12, "CRO": 13, "SUI": 14, "USA": 16,
+    "JPN": 17, "SEN": 18, "NOR": 19, "IRN": 22, "AUT": 23,
+    "EGY": 24, "ECU": 25, "TUR": 27, "AUS": 28, "ALG": 29,
+    "CAN": 30, "CIV": 31, "KOR": 32, "PAR": 34, "SWE": 37,
+    "COD": 41, "SCO": 42, "PAN": 44, "CZE": 48, "RSA": 54,
+    "TUN": 57, "KSA": 58, "QAT": 59, "UZB": 60, "BIH": 61,
+    "IRQ": 63, "CPV": 64, "GHA": 65, "JOR": 73, "CUW": 82,
+    "NZL": 86, "HAI": 88,
 }
 
 DATOS_PENDIENTES = [
-    ("CONMEBOL eliminatoria Colombia - detalles menores", "Fecha exacta de 3 de los 18 partidos (Uruguay fecha 11, vuelta Ecuador, vuelta Chile) y localia exacta de la fecha 1 ante Venezuela", "Marcador y rival confirmados con 2+ fuentes; solo falta precisar fecha/localia exacta"),
     ("Mundial 2026 semifinales", "Marcador exacto de Espana-Francia y Argentina-Inglaterra", "Solo se confirmo el resultado cualitativo (quien avanzo)"),
     ("Eliminatorias CAF/AFC/CONCACAF/OFC", "Tablas de posiciones completas de selecciones no clasificadas", "Fuera de alcance manual verificado en esta fase"),
     ("Liga de Naciones UEFA 2024-25", "Marcador exacto de la final Portugal-Espana", "Campeon confirmado, marcador exacto no verificado"),
-    ("Entrenador de Ghana", "Nombre del tecnico actual de Ghana", "No confirmado en la fuente consultada (aparece como 'por confirmar')"),
-    ("Ranking FIFA posiciones 11-48", "Ranking FIFA fin de ciclo de las selecciones fuera del top 10, y ranking de inicio de ciclo (sept 2023) de las 48", "Solo se obtuvo el top 10 post-Mundial en esta fase"),
+    ("Ranking FIFA fin de ciclo - selecciones no clasificadas", "Ranking post-Mundial de Venezuela, Peru, Bolivia, Chile, Jamaica, Nigeria, Camerun y Gabon; y ranking de inicio de ciclo (sept 2023) de las 48 clasificadas", "Se completaron las 48 clasificadas; el resto queda fuera de alcance en esta fase"),
     ("Estadisticas colectivas e individuales", "Goles, tiros, posesion, xG, y estadisticas de jugadores", "No recopilado en esta fase; requiere fuente estructurada"),
 ]
 
