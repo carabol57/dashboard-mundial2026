@@ -1,0 +1,1 @@
+# dashboard-mundial2026
